@@ -1,14 +1,33 @@
-class FileParser:
-    'File Parser class for all functionality related to parsing a class'
+import string;
+
+# File Parser  for read/write operations
+# on file.
+
+punctuationList = [",", ".", "'"]
+
+# Function to remove all the punctuations.
+# Iterate through array and remove punctuation.
+def removePunctuation(array):
+    for i, document in enumerate(array):
+        translator = str.maketrans('', '', string.punctuation)
+        array[i] = document.translate(translator)
+        array[i] = document.replace('\n', " ")
+        #array[i] = document.replace('\t', " ")
+
+        print(array[i])
+    return array
 
 
-    def parseFileBasedOnDelimiter(self, fileName):
-        self.fileHandle = open(fileName, 'r')
+# Function to parse file and create
+# a string array based on delimiter
+def parseFileBasedOnDelimiter(fileName, delimiter):
+    fileHandle = open(fileName, 'r')
+    contents = fileHandle.read().strip('\n')
 
-        for line in self.fileHandle:
-            fields = line.split('|')
 
-            print(fields[0])  # prints the first fields value
-            print(fields[1])  # prints the second fields value
+    entry = contents.split(delimiter)
+    print(entry)
+    # print(entry.__len__())
 
-        self.fileHandle.close()
+    fileHandle.close()
+    return entry

@@ -1,4 +1,1 @@
-
-
-def calculateTfIDF():
-    FileParser.parseFileBasedOnDelimiter();
+import com.tfidf;

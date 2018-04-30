@@ -3,6 +3,7 @@ from com.tfidf import FileParser
 from com.tfidf import TermFrequency
 from com.tfidf import InverseDocumentFrequency
 from com.tfidf import TFIDF
+from com.tfidf import EuclidianDistance
 
 def main():
     parser = argparse.ArgumentParser(description='TF-IDF and Luigi pipeline.')
@@ -27,5 +28,7 @@ def main():
             inverseDocumentFrequency = InverseDocumentFrequency.calculateInverseDocumentFrequency(removedPunctuationArray, numberOfDocuments)
 
             tfIdfDocuments = TFIDF.calculateTfIdf(termFrequencyDocuments, inverseDocumentFrequency)
+
+            EuclidianDistance.calculateSimilarityInDocuments(tfIdfDocuments)
 
 main()

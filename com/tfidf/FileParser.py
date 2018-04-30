@@ -24,10 +24,8 @@ def parseFileBasedOnDelimiter(fileName, delimiter):
     fileHandle = open(fileName, 'r')
     contents = fileHandle.read().strip('\n')
 
-
     entry = contents.split(delimiter)
     print(entry)
-    # print(entry.__len__())
 
     fileHandle.close()
     return entry

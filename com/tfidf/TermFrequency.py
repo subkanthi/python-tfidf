@@ -4,27 +4,20 @@ from collections import Counter;
 # Frequency of words appearing
 # in a document.
 def calculateTermFrequency(array):
-    for document in array :
-        array = numberOfWords(document)
-    #termFrequency(array)
-    #mapFrequencyWords = Counter(array).most_common()
-    #print(mapFrequencyWords)
-    #return mapFrequencyWords
+    for i, document in enumerate(array) :
+        array[i] = termFrequencyForDocument(document)
+    return array
 
 
-def termFrequency(counterArray):
-    for element in counterArray:
-        element.value = element.value / counterArray.__len__
-        print(element)
-
-
-
-
-
-# Function to calculate number of words in a document
-def numberOfWords(document):
-    count = Counter(document.split());
+# Function to calculate term Frequency of a document
+# Term frequency is number of times the word appears
+# in a document divided by number of words in the document
+def termFrequencyForDocument(document):
+    count = Counter(document.split())
+    totalLength = count.__len__()
+    for item in count:
+        count[item] = count[item] / totalLength
     print(count)
-    return count;
+    return count
 
 

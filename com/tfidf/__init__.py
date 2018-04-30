@@ -1,6 +1,7 @@
 import argparse;
 from com.tfidf import FileParser
 from com.tfidf import TermFrequency
+from com.tfidf import InverseDocumentFrequency
 
 def main():
     parser = argparse.ArgumentParser(description='TF-IDF and Luigi pipeline.')
@@ -15,8 +16,14 @@ def main():
     if args:
         if args.file:
             array = FileParser.parseFileBasedOnDelimiter(args.file, args.delimiter)
-            removedPunctuationArray = FileParser.removePunctuation(array)
-            TermFrequency.calculateTermFrequency(removedPunctuationArray)
 
+            removedPunctuationArray = FileParser.removePunctuation(array)
+
+            numberOfDocuments = removedPunctuationArray.__len__()
+
+            termFrequencyDocuments = TermFrequency.calculateTermFrequency(removedPunctuationArray)
+            inverseDocumentFrequencyDocuments = InverseDocumentFrequency.calculateNumberOfDocumentsPerWord(termFrequencyDocuments)
+
+            InverseDocumentFrequency.calculateInverseDocumentFrequency(inverseDocumentFrequencyDocuments, termFrequencyDocuments.__len__())
 
 main()

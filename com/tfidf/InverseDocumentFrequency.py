@@ -1,3 +1,5 @@
+import math;
+
 #IDF(t) = log_e(Total number of documents / Number of documents with term t in it).
 
 # Create dictionary with key(word)
@@ -14,11 +16,13 @@ def calculateNumberOfDocumentsPerWord(documents):
     return numDocumentsPerWord
 
 def calculateInverseDocumentFrequency(documents, totalNumOfDocuments):
-    for key, value in documents.items():
-        documents[key] = value / totalNumOfDocuments
+    numDocumentsPerWord = calculateNumberOfDocumentsPerWord(documents)
+    for key, value in numDocumentsPerWord.items():
+        numDocumentsPerWord[key] = math.log(value / totalNumOfDocuments)
 
     # Debugging
-    for key, value in documents.items():
+    for key, value in numDocumentsPerWord.items():
         print(key, value)
 
-    return documents
+    return numDocumentsPerWord
+

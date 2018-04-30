@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe4006a7-6116-4746-a405-8eaae67e9f24" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/tfidf/TFIDF.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/tfidf/FileParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/tfidf/FileParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/tfidf/TermFrequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/tfidf/TermFrequency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/tfidf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/tfidf/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/tfidf/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="257">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -29,11 +28,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TFIDF.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/tfidf/TFIDF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InverseDocumentFrequency.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="97">
+              <caret line="10" column="59" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -78,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/com/tfidf/TermFrequency.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -109,7 +117,9 @@
         <option value="$PROJECT_DIR$/com/tfidf/FileParser.py" />
         <option value="$PROJECT_DIR$/com/tfidf/TermFrequency.py" />
         <option value="$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py" />
+        <option value="$PROJECT_DIR$/com/tfidf/TF-IDF.py" />
         <option value="$PROJECT_DIR$/com/tfidf/__init__.py" />
+        <option value="$PROJECT_DIR$/com/tfidf/TFIDF.py" />
       </list>
     </option>
   </component>
@@ -215,7 +225,7 @@
     <frame x="20" y="43" width="1400" height="785" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17928572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22357143" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" />
@@ -224,7 +234,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994374" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994374" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -239,7 +249,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/com/tfidf/__init__.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/com/tfidf/__init__.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/com/tfidf/TFIDF.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -250,10 +277,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/tfidf/TermFrequency.py">
+    <entry file="file://$USER_HOME$/Downloads/TechnicalTest (3)/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        <state relative-caret-position="225">
+          <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -264,20 +291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/TechnicalTest (3)/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/tfidf/FileParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -285,13 +298,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/tfidf/InverseDocumentFrequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/tfidf/TermFrequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/tfidf/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="257">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/tfidf/TFIDF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
